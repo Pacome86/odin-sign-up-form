@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,41 +51,74 @@
                             <label for="first-name">
                                 <span>FIRST NAME</span>
                             </label>
-                            <input type="text" name="first-name" id="first-name">
+                            <input  type="text" 
+                                    name="first-name" 
+                                    id="first-name" 
+                                    autocomplete="first-name"
+                                    required>
                         </div>
                         <div>
                             <label for="last-name">
                                 <span>LAST NAME</span>
                             </label>
-                            <input type="text" name="last-name" id="last-name">
+                            <input  type="text" 
+                                    name="last-name" 
+                                    id="last-name"
+                                    autocomplete="last-name" 
+                                    required>
                         </div>
                         <div>
                             <label for="user-mail">
                                 <span>EMAIL</span>
                                 <strong><span aria-label="required">*</span></strong>
                             </label>
-                            <input type="email" name="user-mail" id="user-mail" required>
+                            <input  type="email" 
+                                    name="user-mail" 
+                                    id="user-mail" 
+                                    placeholder="Joe@example.com"
+                                    autocomplete="email" 
+                                    required>
                         </div>
                         <div>
                             <label for="user-tel">
                                 <span>PHONE NUMBER</span>
                             </label>
-                            <input type="tel" name="user-tel" id="user-tel">
+                            <input  type="tel" 
+                                    name="user-tel" 
+                                    id="user-tel"
+                                    pattern="\d{10,}"
+                                    autocomplete="tel" 
+                                    required>
                         </div>
                         <div>
                             <label for="password">
                                 <span>PASSWORD</span>
                                 <strong><span aria-label="required">*</span></strong>
+                                <span id="pwd-label" class="error">Minimum 8 characters</span>
                             </label>
-                            <input type="password" name="password" id="password" required>
+                            <input  type="password" 
+                                    name="password" 
+                                    id="password"
+                                    pattern="^(?=.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    autocomplete="off"
+                                    required>   
                         </div>
+                        
                         <div>
                             <label for="password">
                                 <span>CONFIRM PASSWORD</span>
                                 <strong><span aria-label="required">*</span></strong>
+                                <span id="check-pwd" class="error"></span>
                             </label>
-                            <input type="password" name="password" id="password" required>
+                            <input  type="password" 
+                                    name="password" 
+                                    id="match-pwd" 
+                                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    autocomplete="off" 
+                                    required>
+                            
                         </div>
+                        
                     </div>
                 </div>
 
