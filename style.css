@@ -458,13 +458,34 @@ h3 {
     font-size: .8rem;
 }
 
-/* main content */
-
+/* form content */
 input {
     padding: 2px 6px;
+    margin-bottom: .6rem;
     border-radius: 4px;
     border: 1px solid #e5e7eb;
     
+}
+
+input:focus {
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+input:invalid:focus {
+    border: 1px solid rgb(255, 0, 0);
+    color: black;
+
+}
+
+input:focus:valid {
+    border: 1px solid rgb(89, 109, 72);
+    color: black;
+}
+
+.error {
+    color: rgb(255, 0, 0);
 }
 
 label {
@@ -481,10 +502,6 @@ label {
     display: inline-block;
     margin: 0.8rem 4rem 0.8rem 0;
 }
-
-/* .info-wrapper {
-    padding: 2rem;
-} */
 
 .button-wrapper {
     padding: 2rem;
@@ -503,6 +520,10 @@ button {
     font-weight: bolder;
     cursor: pointer;
     box-shadow: 2px 5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+   background-color: #5a9724; 
 }
 
 .button-wrapper a {
