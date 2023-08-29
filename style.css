@@ -442,14 +442,16 @@ body {
 /* header */
 .intro {
     padding: 2rem;
+    margin-top: 2rem;
     font-weight: bold;
     
 }
 
 h3 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 1rem; */
     padding-left: 2rem;
+    padding-top: 2rem; /* Testing */
 }
 
 .indication {
@@ -481,11 +483,23 @@ label {
 .user-data {
     box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.1);
     padding-left: 2rem;
+    padding-right: 12%;
+    padding-top: 1rem;
+    min-height: 36vh;
+    
 }
+
+/* @media only screen and (max-width: 600px) {
+    .user-data {
+        padding-right: 30%;
+    }
+} */
 
 .user-data div {
     display: inline-block;
     margin: 0.8rem 4rem 0.8rem 0;
+    width: 40%;   
+    
 }
 
 .button-wrapper {
