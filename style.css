@@ -423,6 +423,11 @@ body {
 }
 
 /* containers */
+
+form {
+    margin-top: -2rem;
+}
+
 .main-container {
     min-height: 100vh;
     width: 64%;
@@ -441,17 +446,16 @@ body {
 
 /* header */
 .intro {
-    padding: 2rem;
+    padding: 2rem 20% 2rem 2rem;
     margin-top: 2rem;
+    margin-bottom: 0;
     font-weight: bold;
     
 }
 
 h3 {
-    /* margin-top: 2rem; */
-    /* margin-bottom: 1rem; */
     padding-left: 2rem;
-    padding-top: 2rem; /* Testing */
+    padding-top: 2rem;
 }
 
 .indication {
@@ -482,18 +486,14 @@ label {
 
 .user-data {
     box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.1);
-    padding-left: 2rem;
-    padding-right: 12%;
-    padding-top: 1rem;
-    min-height: 36vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 12% 1rem 2rem;
+    min-height: 30vh;
+    
+
     
 }
-
-/* @media only screen and (max-width: 600px) {
-    .user-data {
-        padding-right: 30%;
-    }
-} */
 
 .user-data div {
     display: inline-block;
@@ -529,11 +529,11 @@ button:hover {
     text-decoration: none;
     color: #596D48;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .button-wrapper p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Validation styles */
@@ -556,7 +556,7 @@ input:focus:valid {
 .footer {
     align-self: center;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1.2rem;
     color: #26470a;
 }
 
@@ -590,7 +590,6 @@ input:focus:valid {
 }
 
 .credits {
-    /* position: inherit; */
     position: relative;
     bottom: -41%;
     align-self: center;
